@@ -8,7 +8,7 @@ npm run build
 
 git add .
 git add dist -f
-git commit -m 'deploy'
+git commit -m $1
 
 # if you are deploying to https://<USERNAME>.github.io
 git push origin master
