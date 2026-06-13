@@ -12,4 +12,12 @@
     background-color: rgba(255, 255, 255, 0.1);
     overflow-y: auto;
 }
+
+@media (max-width: 768px) {
+    .app-content-wrapper {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+}
 </style>

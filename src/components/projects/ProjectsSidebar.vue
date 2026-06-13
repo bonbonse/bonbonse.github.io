@@ -60,4 +60,21 @@ export default defineComponent({
     border-radius: 40px 0 0 40px;
   }
 }
+
+@media (max-width: 768px) {
+  .projects-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .project-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+
+    &.active {
+      border-radius: 40px;
+    }
+  }
+}
 </style>

@@ -19,17 +19,19 @@ import AppSidebar from './components/layout/AppSidebar.vue';
   align-items: center;
   justify-content: center;
   background-color: $bg-primary;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
   position: relative;
   &-wrapper {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin: 20px;
     text-align: center;
     border-radius: 20px;
     width: 95%;
-    height: 95%;
+    min-height: 90vh;
+    min-height: 90dvh;
     background-color: rgba(255, 255, 255, 0.1);
     &__sidebar {
       margin-left: 20px;
@@ -39,6 +41,30 @@ import AppSidebar from './components/layout/AppSidebar.vue';
       height: 100%;
       width: 100%;
       margin-top: 20px;
+      min-height: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    align-items: stretch;
+    min-height: 100dvh;
+    &-wrapper {
+      flex-direction: column;
+      margin: 10px;
+      width: calc(100% - 20px);
+      min-height: auto;
+      height: auto;
+      &__sidebar {
+        margin: 0;
+        padding: 16px 16px 0;
+      }
+      &__content {
+        margin-top: 0;
+        padding: 0 0 16px;
+        flex: 1;
+      }
     }
   }
 }

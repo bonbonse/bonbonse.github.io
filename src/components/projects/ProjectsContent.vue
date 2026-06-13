@@ -44,4 +44,15 @@ export default defineComponent({
     }
   }
 }
+
+@media (max-width: 768px) {
+  .projects-content {
+    .card {
+      &__text {
+        padding: 16px 20px;
+        font-size: 15px;
+      }
+    }
+  }
+}
 </style>

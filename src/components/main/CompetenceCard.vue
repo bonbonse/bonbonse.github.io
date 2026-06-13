@@ -71,4 +71,22 @@ export default defineComponent({
         font-size:  14px;
     }
 }
+
+@media (max-width: 768px) {
+    .card {
+        padding: 16px 20px;
+        height: auto;
+        min-height: 70px;
+
+        &__caption {
+            font-size: 15px;
+        }
+        &__second-caption {
+            font-size: 20px;
+        }
+        &__content {
+            font-size: 13px;
+        }
+    }
+}
 </style>

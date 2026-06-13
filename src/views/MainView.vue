@@ -128,5 +128,43 @@ export default defineComponent({
   }
 }
 
+@media (max-width: 768px) {
+  .main-page {
+    padding: 1rem;
+
+    .profile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      &__photo {
+        width: 100px;
+        height: 100px;
+      }
+      &__name {
+        font-size: 20px;
+      }
+      &__description {
+        font-size: 16px;
+      }
+    }
+
+    .content {
+      gap: 20px;
+
+      .competencies {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .card {
+        &__text {
+          padding: 16px 20px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
 
 </style>

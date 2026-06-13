@@ -61,5 +61,14 @@ export default defineComponent({
   padding: 2rem;
   display: flex;
   height: 100%;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 </style>

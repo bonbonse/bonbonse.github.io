@@ -49,12 +49,31 @@ export default defineComponent({
         .nav-link {
             color: white;
             text-decoration: none;
+            white-space: nowrap;
         }
         .active {
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px 0 0 10px;
             padding: 15px;
             padding-right: 30px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        font-size: 18px;
+        nav {
+            flex-direction: row;
+            gap: 8px;
+            .nav-link {
+                padding: 10px 16px;
+                border-radius: 10px;
+            }
+            .active {
+                border-radius: 10px;
+                padding: 10px 16px;
+            }
         }
     }
 }
