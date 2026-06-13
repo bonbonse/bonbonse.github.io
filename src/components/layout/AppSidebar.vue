@@ -12,7 +12,7 @@ export default defineComponent({
         return {
             routerLinkItems: [
                 { caption: 'Главная', link: '/', is_active: true },
-                { caption: 'Обо мне', link: '/about', is_active: false },
+                { caption: 'Проекты', link: '/projects', is_active: false },
             ] as RouterLinkItem[],
         };
     },
