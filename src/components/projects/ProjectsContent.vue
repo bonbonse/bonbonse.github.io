@@ -29,10 +29,10 @@ export default defineComponent({
   flex: 1;
 
   .card {
-    background-color: rgb(white, 0.7);
+    background-color: rgba(white, 0.7);
 
     &__photo {
-      width: 100%;
+      width: 541px;
       display: block;
       border-radius: 20px 20px 0 0;
     }
@@ -48,9 +48,13 @@ export default defineComponent({
 @media (max-width: 768px) {
   .projects-content {
     .card {
+      padding: 20px;
       &__text {
         padding: 16px 20px;
         font-size: 15px;
+      }
+      &__photo {
+        width: 250px;
       }
     }
   }

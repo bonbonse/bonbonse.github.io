@@ -7,6 +7,7 @@ import { defineComponent } from 'vue';
 type ProjectItem = {
   name: string;
   description: string;
+  photo?: string;
 };
 
 export default defineComponent({
@@ -19,7 +20,7 @@ export default defineComponent({
     return {
       activeIndex: null as number | null,
       projects: [
-        { name: 'Проект 1', description: 'Описание первого проекта. Здесь будет подробная информация о том, чем я занимался в этом проекте, какие технологии использовал и каких результатов достиг.' },
+        { name: 'Проект 1', description: 'Описание первого проекта. Здесь будет подробная информация о том, чем я занимался в этом проекте, какие технологии использовал и каких результатов достиг.', photo: '/src/assets/photo.jpg' },
         { name: 'Проект 2', description: 'Описание второго проекта. Интересная задача с нестандартным решением, которое позволило добиться отличных показателей производительности.' },
         { name: 'Проект 3', description: 'Описание третьего проекта. Командная работа над крупным сервисом, где я отвечал за архитектуру бэкенда и координацию разработки.' },
         { name: 'Проект 4', description: 'Описание четвертого проекта. Пет-проект, который вырос в полноценный продукт с тысячами пользователей.' },
@@ -50,7 +51,7 @@ export default defineComponent({
       <ProjectsContent
         v-if="activeProject"
         :text="activeProject.description"
-        photo="/src/assets/photo.jpg"
+        :photo="activeProject.photo"
       />
     </div>
   </ContentWrapper>
@@ -61,7 +62,6 @@ export default defineComponent({
   padding: 2rem;
   display: flex;
   height: 100%;
-  gap: 24px;
 }
 
 @media (max-width: 768px) {

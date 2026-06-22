@@ -42,6 +42,24 @@ export default defineComponent({
         <div class="profile__info">
           <div class="profile__name">Бондарь Семен</div>
           <div class="profile__description">Программист, человек, филантроп</div>
+          <div class="profile__contacts">
+            <div class="profile__contact">
+              <div class="profile__contact-label">Email</div>
+              <div class="profile__contact-value">cemenbond@mail.ru</div>
+            </div>
+            <div class="profile__contact">
+              <div class="profile__contact-label">github</div>
+              <div class="profile__contact-value">https://github.com/bonbonse</div>
+            </div>
+            <div class="profile__contact">
+              <div class="profile__contact-label">Телефон</div>
+              <div class="profile__contact-value">79964132838</div>
+            </div>
+            <div class="profile__contact">
+              <div class="profile__contact-label">Telegram</div>
+              <div class="profile__contact-value">@Semjonbond</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="content">
@@ -68,7 +86,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .main-page {
-  padding: 2rem;
+  padding: 53px 108px;
 
   .profile {
     display: flex;
@@ -98,6 +116,28 @@ export default defineComponent({
     &__description {
       font-size: 20px;
       color: $text-dark;
+    }
+
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    &__contact {
+      display: flex;
+      gap: 12px;
+
+      &-label {
+        font-size: 14px;
+        color: $text-dark;
+        min-width: 70px;
+      }
+
+      &-value {
+        font-size: 14px;
+      }
     }
   }
 
@@ -146,6 +186,14 @@ export default defineComponent({
       }
       &__description {
         font-size: 16px;
+      }
+      &__contact {
+        flex-direction: column;
+        gap: 2px;
+
+        &-label {
+          min-width: unset;
+        }
       }
     }
 

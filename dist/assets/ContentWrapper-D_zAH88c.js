@@ -1,1 +1,0 @@
-import{_ as t,c as o,h as r,o as n}from"./index-B85YgwEn.js";const s={},c={class:"app-content-wrapper"};function a(e,p){return n(),o("div",c,[r(e.$slots,"default")])}const l=t(s,[["render",a]]);export{l as C};

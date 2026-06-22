@@ -11,14 +11,25 @@ export default defineComponent({
     data() {
         return {
             routerLinkItems: [
-                { caption: 'Главная', link: '/', is_active: true },
+                { caption: 'Главная', link: '/', is_active: false },
                 { caption: 'Проекты', link: '/projects', is_active: false },
             ] as RouterLinkItem[],
         };
     },
     methods: {
+        setActiveByPath(path: string) {
+            this.routerLinkItems.map((item) => item.is_active = item.link === path);
+        },
         handleSelectRouterLink(selectedRouterLink: RouterLinkItem) {
-            this.routerLinkItems.map((item) => item.is_active = item == selectedRouterLink);
+            this.setActiveByPath(selectedRouterLink.link);
+        }
+    },
+    mounted() {
+        this.setActiveByPath(this.$route.path);
+    },
+    watch: {
+        '$route'(to) {
+            this.setActiveByPath(to.path);
         }
     },
 });
@@ -32,7 +43,7 @@ export default defineComponent({
                 :key="item.caption"
                 :to="item.link" 
                 :class="['nav-link', item.is_active ? 'active' : '']"
-                @click.prevent="handleSelectRouterLink(item)"
+                @click="handleSelectRouterLink(item)"
             >{{ item.caption }}</router-link>
         </nav>
     </div>
@@ -45,7 +56,7 @@ export default defineComponent({
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: left;
+        justify-content: right;
         .nav-link {
             color: white;
             text-decoration: none;
